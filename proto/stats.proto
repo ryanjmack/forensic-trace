@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package model;
+
+option go_package = "github.com/ryanjmack/forensic-trace/pkg/model";
+
+// SchedStat represents the raw metrics from /proc/[pid]/schedstat
+//  https://www.kernel.org/doc/Documentation/scheduler/sched-stats.txt
+message SchedStat {
+  // total time spent executing on the CPU (nanoseconds)
+  int64 cpu_time = 1;
+  // total time spent waiting in the run-queue (nanoseconds)
+  int64 run_delay = 2;
+  // number of timeslices run on this CPU
+  int64 p_count = 3;
+}

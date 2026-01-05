@@ -1,0 +1,18 @@
+# --- Toolchain & Artifacts ---
+**/node_modules/
+/bin/
+/target/
+*.out
+.pnpm-debug.log*
+
+# --- System Noise ---
+.fuse_hidden*
+*.swp
+*.swo
+.netrwhist
+
+# --- Local Environment & State ---
+.env*
+go.work.sum
+*.swp
+.idea/

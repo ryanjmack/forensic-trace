@@ -1,0 +1,14 @@
+{
+	"extends": "@tsconfig/strictest/tsconfig.json",
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"verbatimModuleSyntax": true,
+		"paths": {
+			"@forensic-trace/*": ["./packages/*"]
+		}
+	},
+	"include": ["ui/**/*", "packages/**/*", "labs/**/*"],
+	"exclude": ["node_modules", "pkg"]
+}

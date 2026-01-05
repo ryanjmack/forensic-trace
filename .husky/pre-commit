@@ -1,0 +1,2 @@
+# Run only on staged files
+pnpm lint-staged --quiet

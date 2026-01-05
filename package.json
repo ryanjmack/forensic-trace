@@ -1,0 +1,41 @@
+{
+	"name": "forensic-trace",
+	"version": "1.0.0",
+	"description": "Correlate Linux kernel resource contention with runtime performance via real-time telemetry and hardware-synced visualization.",
+	"type": "module",
+	"private": true,
+	"packageManager": "pnpm@10.27.0",
+	"engines": {
+		"node": "24.12.0",
+		"pnpm": "10.27.0"
+	},
+	"license": "MIT",
+	"scripts": {
+		"prepare": "husky",
+		"format": "prettier --write .",
+		"lint-staged": "lint-staged",
+		"test": "pnpm -r test"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "19.3.0",
+		"@commitlint/config-conventional": "19.2.2",
+		"@tsconfig/strictest": "2.0.8",
+		"husky": "9.1.7",
+		"lint-staged": "15.2.7",
+		"prettier": "3.3.3",
+		"ts-proto": "2.10.1",
+		"tsx": "4.21.0",
+		"typescript": "5.9.3"
+	},
+	"lint-staged": {
+		"*.proto": [
+			"make gen"
+		],
+		"*.{js,ts,tsx}": [
+			"make fmt"
+		],
+		"*.go": [
+			"make fmt"
+		]
+	}
+}

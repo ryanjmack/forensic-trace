@@ -1,0 +1,11 @@
+node_modules/
+dist/
+target/
+bin/
+
+# use native formatters
+*.go
+go.work
+
+# OS stuff
+.fuse_hidden*

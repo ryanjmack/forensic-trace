@@ -1,0 +1,47 @@
+
+
+#
+# Conventional Commit Guide
+#   https://www.conventionalcommits.org/en/v1.0.0/#summary
+#
+#----------------------------------------------------------------------
+# STRUCTURE:
+# <type>([scope])[!]: <description>
+#
+# [optional body]
+#
+# [optional footer(s)]
+# ----------------------------------------------------------------------
+# TYPE LEGEND:
+#    feat:     New feature for the app or library
+#    fix:      Bugfix
+#    perf:     Efficiency and latency tuning
+#    chore:    Maintenance, tooling, and deps
+#    refactor: Cleanup (no behavior change)
+#    docs:     Documentation only updates
+# ----------------------------------------------------------------------
+# SCOPE LEGEND:
+#    infra:  Build machinery, CI, Toolchains (Makefile, Husky, scripts)
+#    proto:  The shared contract (stats.proto, generated types)
+#    core:   Shared Go internal logic (transport, collectors)
+#    ui:     The visualization layer (React, Canvas, UI logic)
+#    lab:    Specific research implementations (labs/*)
+#    meta:   Project-level docs and identity (README, LICENSE)
+# ----------------------------------------------------------------------
+# SIMPLE EXAMPLE:
+#    chore(meta): update readme
+#
+# COMPLEX EXAMPLE:
+#    feat(proto)!: transition wait_delta to nanoseconds
+#
+#    Standardize all scheduler telemetry on nanoseconds to avoid 
+#    precision loss in high-frequency sampling (100Hz+).
+#
+#    BREAKING CHANGE: SchedStat.WaitDelta is now uint64 (ns). 
+#    Consumers must update their scaling logic from ms to ns.
+#
+#    FIXES: #42
+#    IDEA: We can use a bit-shift for normalization if CPU cost spikes.
+#    TODO: Update UI line-chart axis scaling
+#    TODO: Fix lab-01-ghosthunter parser to match new type
+# ----------------------------------------------------------------------

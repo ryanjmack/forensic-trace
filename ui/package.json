@@ -1,0 +1,10 @@
+{
+	"name": "@forensic-trace/ui",
+	"version": "1.0.0",
+	"private": true,
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"test": "echo 'OK: UI logic deferred'"
+	}
+}

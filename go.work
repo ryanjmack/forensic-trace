@@ -1,0 +1,8 @@
+go 1.25.0
+
+use (
+	./labs/01-ghosthunter
+	./pkg/model
+	./pkg/telemetry
+	./pkg/transport
+)
